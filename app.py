@@ -1,17 +1,39 @@
-from flask import Flask, render_template
+import extra_functions
+from os import path
+from datetime import datetime
+from flask import Flask, request, redirect, url_for, render_template, flash, session
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import func
+from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 
 @app.route('/')
-
-
 @app.route('/home')
 def home():
     return render_template('home.html', title='Home')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    return render_template('signup.html', title='Sign Up')
+    if request.method == 'POST':
+        username = request.form.get('username')  # Access the username stored in the form
+        password = request.form.get('password')  # Access the password stored in the form
+        cpassword = request.form.get('confirm_password') # Access the cpassword stored in the form
+        if len(username) < 6:
+            flash('Username must be at least 6 characters long', category='error')
+        elif len(password) < 12:
+            flash('Password must be at least 12 characters long', category='error')
+        elif password != cpassword:
+            flash('Passwords do not match', category='error')
+        else:
+            new_user = User(username=username, password=generate_password_hash(password, method='sha256'))
+            db.session.add(new_user)
+            db.session.commit()
+            flash('Registration successful', category='success')
+            return redirect(url_for('registrationsuccess'))
+
+    current_time = datetime.now()  # Get the current date and time
+    return render_template('signup.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
