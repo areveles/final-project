@@ -7,6 +7,9 @@ from sqlalchemy import func
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
+app.secret_key = 'your_secret_key'  # Set a secret key for session management
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///lab8.db'  # Specify the database URI
+db = SQLAlchemy(app)  # Initialize the SQLAlchemy instance
 
 @app.route('/')
 @app.route('/home')
@@ -19,14 +22,14 @@ def signup():
         username = request.form.get('username')  # Access the username stored in the form
         password = request.form.get('password')  # Access the password stored in the form
         cpassword = request.form.get('confirm_password') # Access the cpassword stored in the form
-        if len(username) < 6:
-            flash('Username must be at least 6 characters long', category='error')
+        if (len(username) < 4) or (len(username) > 12):
+            flash('Username must be between 4 and 12 characters long.', category='error')
         elif not(extra_functions.password_valid(password)):
-            flash('Password must be at least 12 characters long, containing one capital letter, one lowercase letter, one number, and one valid special character', category='error')
+            flash('Password must be at least 12 characters long, containing one capital letter, one lowercase letter, one number, and one valid special character.', category='error')
         elif password != cpassword:
-            flash('Passwords do not match', category='error')
+            flash('Passwords do not match.', category='error')
         else:
-            flash('Registration successful', category='success')
+            flash('Registration successful.', category='success')
             return redirect(url_for('login'))
     return render_template('signup.html')
 
