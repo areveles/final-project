@@ -1,6 +1,6 @@
 import extra_functions
 from os import path
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask import Flask, request, redirect, url_for, render_template, flash, session
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
@@ -10,6 +10,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Set a secret key for session management
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///lab8.db'  # Specify the database URI
 db = SQLAlchemy(app)  # Initialize the SQLAlchemy instance
+app.permanent_session_lifetime = timedelta(minutes=15)
 
 @app.route('/')
 @app.route('/home')
@@ -19,13 +20,22 @@ def home():
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
-        username = request.form.get('username')  # Access the username stored in the form
-        password = request.form.get('password')  # Access the password stored in the form
-        cpassword = request.form.get('confirm_password') # Access the cpassword stored in the form
-        if (len(username) < 4) or (len(username) > 12):
+        username = request.form.get('username')  
+        password = request.form.get('password') 
+        cpassword = request.form.get('confirm_password') 
+        age = request.form.get('age') 
+        height = request.form.get('height')
+        weight = request.form.get('weight')
+        first_name = request.form.get('first_name')
+        last_name = request.form.get('last_name')
+        if not(username and password and cpassword and age and height and weight and first_name and last_name):
+            flash('Please ensure all fields are filled out.', category='error')
+        elif (len(username) < 4) or (len(username) > 12):
             flash('Username must be between 4 and 12 characters long.', category='error')
         elif not(extra_functions.password_valid(password)):
             flash('Password must be at least 12 characters long, containing one capital letter, one lowercase letter, one number, and one valid special character.', category='error')
+        elif ((int(age) < 18) or (int(age) > 125)):
+            flash('User age must be at least 18 years old, and no older than 125 years old.')
         elif password != cpassword:
             flash('Passwords do not match.', category='error')
         else:
