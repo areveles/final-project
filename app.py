@@ -26,13 +26,8 @@ def signup():
         elif password != cpassword:
             flash('Passwords do not match', category='error')
         else:
-            new_user = User(username=username, password=generate_password_hash(password, method='sha256'))
-            db.session.add(new_user)
-            db.session.commit()
             flash('Registration successful', category='success')
-            return redirect(url_for('registrationsuccess'))
-
-    current_time = datetime.now()  # Get the current date and time
+            return redirect(url_for('login'))
     return render_template('signup.html')
 
 @app.route('/login', methods=['GET', 'POST'])
