@@ -21,8 +21,8 @@ def signup():
         cpassword = request.form.get('confirm_password') # Access the cpassword stored in the form
         if len(username) < 6:
             flash('Username must be at least 6 characters long', category='error')
-        elif len(password) < 12:
-            flash('Password must be at least 12 characters long', category='error')
+        elif not(extra_functions.password_valid(password)):
+            flash('Password must be at least 12 characters long, containing one capital letter, one lowercase letter, one number, and one valid special character', category='error')
         elif password != cpassword:
             flash('Passwords do not match', category='error')
         else:
