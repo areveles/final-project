@@ -1,0 +1,62 @@
+{% extends "thebase.html" %}
+
+{% block title %}
+    Workout Planner
+{% endblock %}
+
+{% block content %}
+    <h2>Workout Planner</h2>
+    <!-- <form action="/update_workoutplan" method="post"> -->
+    <form action="/workoutplan" method="post">
+        <div class ="form-group">
+            <label for="exercise_category"> Exercise Category:</label>
+            <select class="form-control" id="exercise_category" name="exercise_category">
+              <!-- <option value="" disabled selected>Select a category</option> -->
+              {% for key, label in exercise_category.items() %}
+              <option value="{{ key }}" {% if loop.first %}selected{% endif %}>{{ label }}</option>
+              {% endfor %}
+            </select>
+        </div>  
+
+        <div class="form-group">
+          <label for="exercises">Exercises:</label>
+          <select class="form-control" id="exercises" name="exercises">
+              <!-- <option value="" disabled selected>Select a category</option> -->
+              {% for key, label in exercises.items() %}
+              <option value="{{ key }}" {% if loop.first %}selected{% endif %}>{{ label }}</option>
+              {% endfor %}
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="duration">Duration:</label>
+          <input type="number" class="form-control" id="duration" name="duration" placeholder="Enter workout duration">
+        </div>
+        
+        
+        <div class="form-group">
+          <label for="frequency">Frequency:</label>
+          <input type="number" class="form-control" id="frequency" name="frequency" placeholder="Enter frequency">
+        </div>
+
+        <div class="form-group">
+          <label for="intensity">Intensity:</label>
+          <input type="number" class="form-control" id="intensity" name="intensity" placeholder="Enter workout intensity">
+        </div>
+
+        <div class="form-group">
+          <label for="num_exercises">Number of Exercies:</label>
+          <input type="number" class="form-control" id="num_exercises" name="num_exercises" placeholder="Enter number of exercises">
+        </div>
+
+        <div class="form-group">
+          <label for="workout_date">Workout Date:</label>
+          <!-- <input type="datetime-local" class="form-control" id="workout_date" name="workout_date" placeholder="Enter desired workout date"> -->
+          <input type="date" class="form-control" id="workout_date" name="workout_date" placeholder="Enter desired workout date">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        
+    </form>
+
+{% endblock %}

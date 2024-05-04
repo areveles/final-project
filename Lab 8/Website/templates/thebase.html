@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head Format -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Health & Fitness Tracker - {{ title }} </title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <div class="banner">
+        <div class="details"> Capstone Project - Health & Fitness Tracker </div>
+        <div class="time"> {{ datetime }}</div>
+        <div class="header-img"></div>
+        <div class="banner-title"> {{ title }} </div>
+    </div>
+</head>
+
+<nav>
+    <ul class='nav-links'>
+        <li class='nav-item'><a class='nav-item' href="/">Home</a></li>
+        <li class='nav-item'><a class='nav-item' href="/about">About</a></li>
+        <li class='nav-item'><a class='nav-item' href="/contact">Contact</a></li>
+        <span class="nav-right">
+            {% if is_logged_in %}
+            <li class='nav-item'><a class='nav-item' href="/profile">Profile</a></li>
+            <li class='nav-item'><a class='nav-item' href="/exercise">Exercise Tracker</a></li>
+            <li class='nav-item'><a class='nav-item' href="/goals">Create A Goal</a></li>
+            <li class='nav-item'><a class='nav-item' href="/goals2">Goals</a></li>
+            <li class='nav-item'><a class='nav-item' href="/workoutplan">Workoutplanner</a></li>
+            <li class='nav-item'><a class="nav-item" id="settings-link" href="/settings"> Settings </a></li>
+            {% else %}
+            <li class='nav-item'><a class="nav-item" id="login-link" href="/login"> Login </a></li>
+            <li class='nav-item'><a class="nav-item" id="signup-link" href="/signup"> Sign Up </a></li>
+            {% endif %}
+        </span>
+    </ul>
+</nav>
+
+
+<body>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Flash Messages -->
+    <div class="flash">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flashes">
+                    {% for message in messages %}
+                        <p class="flash-msg">{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <hr class="header-div">
+
+    <footer>
+        <p>&copy; 2024 Health & Fitness Tracker. All rights reserved.</p>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

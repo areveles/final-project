@@ -1,0 +1,16 @@
+{% extends "thebase.html" %}
+
+{% block title %}
+    Data Input
+{% endblock %}
+
+{% block content %}
+    <h2>Calorie Intake Page</h2>
+    <form>
+        <div class="form-group">
+            <label for="calories">Meal Calorie Intake:</label>
+            <input type="number" class="form-control" id="calories" placeholder="Enter calories consumed">
+        </div>
+        <button type="submit" class="btn btn-primary">Confirm</button>
+    </form>
+{% endblock %}

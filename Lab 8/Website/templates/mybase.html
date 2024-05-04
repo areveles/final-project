@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- It wont let me link the CSS file -->
+    <title>{% block title %}Lab 8{% endblock %}</title>
+
+    <!-- Define a block for cursive text styling -->
+    {% block styles %}
+    <style>
+        
+    </style>
+    {% endblock %} <!-- End the block -->
+</head>
+<body>
+    <header>
+        <h1 class="cursive-text">Lab 8</h1> <!-- Set the title of the page(NOT REAL CURSIVE) -->
+        <h2 class="cursive-text">Buttons</h2> <!-- Header under the title -->
+        <nav class="cursive-text"> <!-- Set the navigation bar(STILL NOT CURSIVE) -->
+            <ul>
+                <!-- I fixed these -->
+                <li><a href="/">Home</a></li> 
+                <li><a href="/about">About</a></li>
+                <li><a href="/contactsean">Contact</a></li>
+                <li><a href="/read">Read</a></li>
+                <li><a href="/registration">Register</a></li>
+                <li><a href="/table">Table</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/passwordupdate">Password Update</a></li>
+                
+
+
+            </ul>
+        </nav>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            {% if category == 'error' %}
+                <div class="alert alert-danger alter-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            {% if category == 'success' %} {# Assuming you have a 'success' category for flash messages #}
+                <div class="alert alert-success alter-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+        <p class="cursive-text">Current Date and Time: {{ current_time.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+    </header>
+
+    <main>
+        <h3 class="cursive-text">This is my updated website for lab 8 </h3> <!-- Header for the section with buttons -->
+        
+        <p>This is my paragraph, I'm not sure what to put here but this so far has been a cool assignment</p>
+        <p>I have enjoyed learning a lot about HTML and this formatting is cool, I'm going to try to do inheritance</p>
+        
+       
+        <ul>
+       <image src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Cool" width="200" height="200"> <!-- Image -->
+
+        
+        <a href="https://www.youtube.com/">Visit Youtube</a> <!-- External link -->
+        <a href="https://www.google.com/">Visit Google</a> <!-- External link -->
+        <a href="https://www.reddit.com/">Visit Reddit</a> <!-- External link -->
+
+
+        <ul>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        &copy; {{ current_year }} My Website
+        <h3 class="cursive-text"></h3> <!-- Header at the bottom of the page -->
+    </footer>
+</body>
+</html>
