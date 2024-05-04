@@ -16,7 +16,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True, nullable=False)
     password_hash = db.Column(db.String(128), nullable=False)
-    first_name = db.Column(db.String(50), nullable=False)
+    first_name = db.Column(db.String(54), nullable=False)
     last_name = db.Column(db.String(50), nullable=False)
     age = db.Column(db.Integer)
     height = db.Column(db.Float)  # didn't decide what to put it in yet
@@ -89,6 +89,8 @@ def profile():
 @app.route('/update_profile', methods=['GET', 'POST'])
 def update_profile():
     # Add profile update logic here
+    if user_id not in users:
+
     pass
 
 @app.route('/settings')
@@ -99,7 +101,34 @@ def settings():
 @app.route('/update_settings', methods=['POST'])
 def update_settings():
     # Add settings update logic here
-    pass
+    if request.method == 'POST':
+        user_id = session.get('user_id')
+        if user_id:
+            user = User.query.get(user_id)
+            if user:
+            # Update user settings based on the form data
+            user.first_name = request.form['first_name']
+            user.last_name = request.form['last_name']
+            user.age = request.form['age']
+            user.height = request.form['height']
+            user.weight = request.form['weight']
+            user.calorie_intake = request.form['calorie_intake']
+
+            # Commit changes to the database
+            db.session.commit()
+
+            # Flash a success message to the user
+            flash('Your settings have been update successfully', 'success')
+
+            # Redirect the user back to the settings page
+            return redirect(url_for('settings'))
+        else:
+            flash('User not found.', 'error')
+    else:
+        flash('Invalid request method', 'error')
+    
+    # Redirect user back to settings page in case of errors
+    return redirect(url_for('settings'))
 
 @app.route('/goals', methods=['GET', 'POST'])
 def goals():
