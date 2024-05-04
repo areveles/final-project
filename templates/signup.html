@@ -1,0 +1,114 @@
+{% extends "thebase.html" %}
+
+{% block title %} Signup Page{% endblock %}
+   
+
+{% block content %}
+<!-- <style>
+    body {
+        background-color: rgb(13, 164, 234); /* Put Image in document */
+    }
+</style> -->
+
+<h2>User Registration</h2>
+
+<form action="/signup" method="POST">
+
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name"><br><br>
+
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name"><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age"><br><br>
+
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" name="height"><br><br>
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" name="weight"><br><br>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" pattern="^[a-zA-Z0-9.-]{4,16}$" title="Username must be between 4 and 16 characters."><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+
+    <label for="confirm_password">Confirm Password:</label>
+    <input type="password" id="confirm_password" name="confirm_password"><br><br>
+
+    <input type="submit" value="Register">
+</form>
+
+<p>Your password must be 12 characters in length with at least upper/lower case character, 1 number, and 1 special character</p>
+<ul>
+    <li>At least 1 uppercase character</li>
+    <li>At least 1 lowercase character</li>
+    <li>At least 1 special character (e.g., !@#$%^&*()-_=+[]{}|;:'",.<>?/)</li>
+    <li>At least 1 number</li>
+</ul>
+
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const passwordInput = document.getElementById('password')
+        const confirmInput = document.getElementById('confirm_password')
+        const passwordValidationMessages = document.getElementById('password_validation_messages');
+
+        passwordInput.addEventListener('keyup',validatePassword)
+        confirmInput.addEventListener('keyup',validatePassword)
+
+        function validatePassword(){
+            const password = passwordInput.value;
+            const confirm = confirmInput.value;
+            const uppercaseRegex = /[A-Z]/;
+            const lowercaseRegex = /[a-Z]/;
+            const numberRegex = /[0-9]/;
+            const specialCharRegex = /[!@#$%^&*()\-_=+\[\]{}|;:'",.<>?/]/;
+
+            const hasUppercase = uppercaseRegex.test(password);
+            const hasLowercase = lowercaseRegex.test(password);
+            const hasNumber = numberRegex.test(password);
+            const hasSpecialChar = specialCharRegex.test(password);
+
+            const validationMessages = [];
+
+            if (password.legnth < 12) {
+                validateMessages.push('Password must be at least 12 characters long.');
+            }
+            
+            if(!hasUppercase){
+                validationMessages.push('Password must have at least one uppercase character.');
+            }
+
+            if(!hasLowercase){
+                validationMessages.push('Password must have at least one lowercase character.');
+            }
+
+            if(!hasNumber){
+                validationMessages.push('Password must have at least one number.');
+            }
+
+            if(!hasSpecialChar){
+                validationMessages.push('Password must have at least one special character.');
+            }
+
+            if (password !== confirm) {
+                validateMessages.push('Passwords do not match.');
+            }
+
+            if (validationMessages.length > 0) {
+                passwordValidationMessages.innerHTML = validateMessages.join('<br>');
+            }else{
+                passwordValidationMessages.innerHTML = '';
+            }
+        }
+
+
+    });
+</script> -->
+    
+<!-- <p id="password_validation_messages" class="error"></p> -->
+
+
+{% endblock %}

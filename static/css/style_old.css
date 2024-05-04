@@ -1,0 +1,60 @@
+html, body, h1, h2, p, ul, li, ol {
+
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: cursive, sans-serif;
+    background-color: rgb(0, 0, 0);
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+}
+
+p {
+    font-size: 1em;
+    font-weight: normal;
+    text-align: left;
+}
+
+
+
+a{
+ color: black;
+    text-decoration: none;
+}
+
+
+
+
+/* My 3 heading styles */
+
+
+ul {
+    font-size: 1em;
+    font-weight: normal;
+    text-align: left;
+}
+li {
+    font-size: 1em;
+    font-weight: normal;
+    text-align: left;
+}
+
+
+ol {
+    font-size: 1em;
+    font-weight: normal;
+    text-align: left;
+}

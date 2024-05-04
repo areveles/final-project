@@ -1,0 +1,166 @@
+2023-10-09 11:44:37,848 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-10-09 11:44:37,848 INFO [33mPress CTRL+C to quit[0m
+2023-10-09 11:44:58,500 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-10-09 11:44:58,501 INFO [33mPress CTRL+C to quit[0m
+2023-10-09 11:47:12,201 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-10-09 11:47:12,202 INFO [33mPress CTRL+C to quit[0m
+2023-10-09 11:47:25,164 INFO 127.0.0.1 - - [09/Oct/2023 11:47:25] "GET / HTTP/1.1" 200 -
+2023-10-09 11:47:25,236 INFO 127.0.0.1 - - [09/Oct/2023 11:47:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:25,256 INFO 127.0.0.1 - - [09/Oct/2023 11:47:25] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:35,609 INFO 127.0.0.1 - - [09/Oct/2023 11:47:35] "GET /table HTTP/1.1" 200 -
+2023-10-09 11:47:35,629 INFO 127.0.0.1 - - [09/Oct/2023 11:47:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:35,638 INFO 127.0.0.1 - - [09/Oct/2023 11:47:35] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:35,644 INFO 127.0.0.1 - - [09/Oct/2023 11:47:35] "GET /static/images/image7.jpg HTTP/1.1" 200 -
+2023-10-09 11:47:36,599 INFO 127.0.0.1 - - [09/Oct/2023 11:47:36] "GET / HTTP/1.1" 200 -
+2023-10-09 11:47:36,620 INFO 127.0.0.1 - - [09/Oct/2023 11:47:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:36,630 INFO 127.0.0.1 - - [09/Oct/2023 11:47:36] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:37,041 INFO 127.0.0.1 - - [09/Oct/2023 11:47:37] "GET /about HTTP/1.1" 200 -
+2023-10-09 11:47:37,061 INFO 127.0.0.1 - - [09/Oct/2023 11:47:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:37,068 INFO 127.0.0.1 - - [09/Oct/2023 11:47:37] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:37,074 INFO 127.0.0.1 - - [09/Oct/2023 11:47:37] "GET /static/images/image2.jpg HTTP/1.1" 200 -
+2023-10-09 11:47:37,510 INFO 127.0.0.1 - - [09/Oct/2023 11:47:37] "GET /contactsean HTTP/1.1" 200 -
+2023-10-09 11:47:37,532 INFO 127.0.0.1 - - [09/Oct/2023 11:47:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:37,541 INFO 127.0.0.1 - - [09/Oct/2023 11:47:37] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:37,544 INFO 127.0.0.1 - - [09/Oct/2023 11:47:37] "GET /static/images/image3.jpg HTTP/1.1" 200 -
+2023-10-09 11:47:37,986 INFO 127.0.0.1 - - [09/Oct/2023 11:47:37] "GET /read HTTP/1.1" 200 -
+2023-10-09 11:47:38,007 INFO 127.0.0.1 - - [09/Oct/2023 11:47:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:38,019 INFO 127.0.0.1 - - [09/Oct/2023 11:47:38] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:38,022 INFO 127.0.0.1 - - [09/Oct/2023 11:47:38] "GET /static/images/image4.jpg HTTP/1.1" 200 -
+2023-10-09 11:47:38,912 INFO 127.0.0.1 - - [09/Oct/2023 11:47:38] "GET /table HTTP/1.1" 200 -
+2023-10-09 11:47:38,934 INFO 127.0.0.1 - - [09/Oct/2023 11:47:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:38,941 INFO 127.0.0.1 - - [09/Oct/2023 11:47:38] "[36mGET /static/images/image7.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:38,944 INFO 127.0.0.1 - - [09/Oct/2023 11:47:38] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:40,578 INFO 127.0.0.1 - - [09/Oct/2023 11:47:40] "GET /table HTTP/1.1" 200 -
+2023-10-09 11:47:40,601 INFO 127.0.0.1 - - [09/Oct/2023 11:47:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:40,604 INFO 127.0.0.1 - - [09/Oct/2023 11:47:40] "[36mGET /static/images/image7.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:40,606 INFO 127.0.0.1 - - [09/Oct/2023 11:47:40] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:42,058 INFO 127.0.0.1 - - [09/Oct/2023 11:47:42] "GET /registration HTTP/1.1" 200 -
+2023-10-09 11:47:42,081 INFO 127.0.0.1 - - [09/Oct/2023 11:47:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:42,088 INFO 127.0.0.1 - - [09/Oct/2023 11:47:42] "[36mGET /static/images/image5.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:42,090 INFO 127.0.0.1 - - [09/Oct/2023 11:47:42] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:42,657 INFO 127.0.0.1 - - [09/Oct/2023 11:47:42] "GET /table HTTP/1.1" 200 -
+2023-10-09 11:47:42,678 INFO 127.0.0.1 - - [09/Oct/2023 11:47:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:42,689 INFO 127.0.0.1 - - [09/Oct/2023 11:47:42] "[36mGET /static/images/image7.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:42,691 INFO 127.0.0.1 - - [09/Oct/2023 11:47:42] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:43,638 INFO 127.0.0.1 - - [09/Oct/2023 11:47:43] "GET /read HTTP/1.1" 200 -
+2023-10-09 11:47:43,660 INFO 127.0.0.1 - - [09/Oct/2023 11:47:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:43,668 INFO 127.0.0.1 - - [09/Oct/2023 11:47:43] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:43,670 INFO 127.0.0.1 - - [09/Oct/2023 11:47:43] "[36mGET /static/images/image4.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:44,835 INFO 127.0.0.1 - - [09/Oct/2023 11:47:44] "GET /login HTTP/1.1" 200 -
+2023-10-09 11:47:44,857 INFO 127.0.0.1 - - [09/Oct/2023 11:47:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:47:44,865 INFO 127.0.0.1 - - [09/Oct/2023 11:47:44] "[36mGET /static/images/image6.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:47:44,867 INFO 127.0.0.1 - - [09/Oct/2023 11:47:44] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:49:35,327 INFO 127.0.0.1 - - [09/Oct/2023 11:49:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-10-09 11:49:35,334 INFO 127.0.0.1 - - [09/Oct/2023 11:49:35] "GET /loginsuccessful HTTP/1.1" 200 -
+2023-10-09 11:49:35,359 INFO 127.0.0.1 - - [09/Oct/2023 11:49:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:49:35,365 INFO 127.0.0.1 - - [09/Oct/2023 11:49:35] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:50:06,054 INFO 127.0.0.1 - - [09/Oct/2023 11:50:06] "GET /passwordupdate HTTP/1.1" 200 -
+2023-10-09 11:50:06,077 INFO 127.0.0.1 - - [09/Oct/2023 11:50:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:50:06,086 INFO 127.0.0.1 - - [09/Oct/2023 11:50:06] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:51:05,491 INFO 127.0.0.1 - - [09/Oct/2023 11:51:05] "POST /passwordupdate HTTP/1.1" 200 -
+2023-10-09 11:51:05,515 INFO 127.0.0.1 - - [09/Oct/2023 11:51:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:51:05,518 INFO 127.0.0.1 - - [09/Oct/2023 11:51:05] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:54:37,417 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-10-09 11:54:37,418 INFO [33mPress CTRL+C to quit[0m
+2023-10-09 11:54:47,059 INFO 127.0.0.1 - - [09/Oct/2023 11:54:47] "GET / HTTP/1.1" 200 -
+2023-10-09 11:54:47,130 INFO 127.0.0.1 - - [09/Oct/2023 11:54:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:54:47,151 INFO 127.0.0.1 - - [09/Oct/2023 11:54:47] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:54:49,015 INFO 127.0.0.1 - - [09/Oct/2023 11:54:49] "GET /login HTTP/1.1" 200 -
+2023-10-09 11:54:49,036 INFO 127.0.0.1 - - [09/Oct/2023 11:54:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:54:49,043 INFO 127.0.0.1 - - [09/Oct/2023 11:54:49] "[36mGET /static/images/image6.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:54:49,046 INFO 127.0.0.1 - - [09/Oct/2023 11:54:49] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:54:50,095 INFO 127.0.0.1 - - [09/Oct/2023 11:54:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-10-09 11:54:50,102 INFO 127.0.0.1 - - [09/Oct/2023 11:54:50] "GET /loginsuccessful HTTP/1.1" 200 -
+2023-10-09 11:54:50,127 INFO 127.0.0.1 - - [09/Oct/2023 11:54:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:54:50,134 INFO 127.0.0.1 - - [09/Oct/2023 11:54:50] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:54:52,021 INFO 127.0.0.1 - - [09/Oct/2023 11:54:52] "GET /passwordupdate HTTP/1.1" 200 -
+2023-10-09 11:54:52,044 INFO 127.0.0.1 - - [09/Oct/2023 11:54:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:54:52,049 INFO 127.0.0.1 - - [09/Oct/2023 11:54:52] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:55:06,003 INFO 127.0.0.1 - - [09/Oct/2023 11:55:06] "POST /passwordupdate HTTP/1.1" 200 -
+2023-10-09 11:55:06,026 INFO 127.0.0.1 - - [09/Oct/2023 11:55:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:55:06,030 INFO 127.0.0.1 - - [09/Oct/2023 11:55:06] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:59:02,814 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-10-09 11:59:02,815 INFO [33mPress CTRL+C to quit[0m
+2023-10-09 11:59:16,552 INFO 127.0.0.1 - - [09/Oct/2023 11:59:16] "GET / HTTP/1.1" 200 -
+2023-10-09 11:59:16,627 INFO 127.0.0.1 - - [09/Oct/2023 11:59:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:59:16,650 INFO 127.0.0.1 - - [09/Oct/2023 11:59:16] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:59:19,018 INFO 127.0.0.1 - - [09/Oct/2023 11:59:19] "GET /login HTTP/1.1" 200 -
+2023-10-09 11:59:19,039 INFO 127.0.0.1 - - [09/Oct/2023 11:59:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:59:19,044 INFO 127.0.0.1 - - [09/Oct/2023 11:59:19] "[36mGET /static/images/image6.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:59:19,047 INFO 127.0.0.1 - - [09/Oct/2023 11:59:19] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:59:21,180 ERROR Failed login attempt for username "seanchaos"
+2023-10-09 11:59:21,182 INFO 127.0.0.1 - - [09/Oct/2023 11:59:21] "POST /login HTTP/1.1" 200 -
+2023-10-09 11:59:21,204 INFO 127.0.0.1 - - [09/Oct/2023 11:59:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 11:59:21,208 INFO 127.0.0.1 - - [09/Oct/2023 11:59:21] "[36mGET /static/images/image6.jpg HTTP/1.1[0m" 304 -
+2023-10-09 11:59:21,210 INFO 127.0.0.1 - - [09/Oct/2023 11:59:21] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:03,167 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-10-09 21:32:03,168 INFO [33mPress CTRL+C to quit[0m
+2023-10-09 21:32:11,555 INFO 127.0.0.1 - - [09/Oct/2023 21:32:11] "GET / HTTP/1.1" 200 -
+2023-10-09 21:32:11,631 INFO 127.0.0.1 - - [09/Oct/2023 21:32:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:11,652 INFO 127.0.0.1 - - [09/Oct/2023 21:32:11] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:11,661 INFO 127.0.0.1 - - [09/Oct/2023 21:32:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-10-09 21:32:15,531 INFO 127.0.0.1 - - [09/Oct/2023 21:32:15] "GET / HTTP/1.1" 200 -
+2023-10-09 21:32:15,554 INFO 127.0.0.1 - - [09/Oct/2023 21:32:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:15,557 INFO 127.0.0.1 - - [09/Oct/2023 21:32:15] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:16,071 INFO 127.0.0.1 - - [09/Oct/2023 21:32:16] "GET /about HTTP/1.1" 200 -
+2023-10-09 21:32:16,091 INFO 127.0.0.1 - - [09/Oct/2023 21:32:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:16,098 INFO 127.0.0.1 - - [09/Oct/2023 21:32:16] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:16,105 INFO 127.0.0.1 - - [09/Oct/2023 21:32:16] "[36mGET /static/images/image2.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:17,334 INFO 127.0.0.1 - - [09/Oct/2023 21:32:17] "GET /contactsean HTTP/1.1" 200 -
+2023-10-09 21:32:17,357 INFO 127.0.0.1 - - [09/Oct/2023 21:32:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:17,364 INFO 127.0.0.1 - - [09/Oct/2023 21:32:17] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:17,373 INFO 127.0.0.1 - - [09/Oct/2023 21:32:17] "[36mGET /static/images/image3.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:18,015 INFO 127.0.0.1 - - [09/Oct/2023 21:32:18] "GET /read HTTP/1.1" 200 -
+2023-10-09 21:32:18,036 INFO 127.0.0.1 - - [09/Oct/2023 21:32:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:18,044 INFO 127.0.0.1 - - [09/Oct/2023 21:32:18] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:18,050 INFO 127.0.0.1 - - [09/Oct/2023 21:32:18] "[36mGET /static/images/image4.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:18,492 INFO 127.0.0.1 - - [09/Oct/2023 21:32:18] "GET /registration HTTP/1.1" 200 -
+2023-10-09 21:32:18,511 INFO 127.0.0.1 - - [09/Oct/2023 21:32:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:18,520 INFO 127.0.0.1 - - [09/Oct/2023 21:32:18] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:18,522 INFO 127.0.0.1 - - [09/Oct/2023 21:32:18] "[36mGET /static/images/image5.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:19,016 INFO 127.0.0.1 - - [09/Oct/2023 21:32:19] "GET /table HTTP/1.1" 200 -
+2023-10-09 21:32:19,036 INFO 127.0.0.1 - - [09/Oct/2023 21:32:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:19,046 INFO 127.0.0.1 - - [09/Oct/2023 21:32:19] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:19,048 INFO 127.0.0.1 - - [09/Oct/2023 21:32:19] "[36mGET /static/images/image7.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:19,502 INFO 127.0.0.1 - - [09/Oct/2023 21:32:19] "GET /login HTTP/1.1" 200 -
+2023-10-09 21:32:19,523 INFO 127.0.0.1 - - [09/Oct/2023 21:32:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:19,533 INFO 127.0.0.1 - - [09/Oct/2023 21:32:19] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:19,534 INFO 127.0.0.1 - - [09/Oct/2023 21:32:19] "[36mGET /static/images/image6.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:20,075 INFO 127.0.0.1 - - [09/Oct/2023 21:32:20] "GET /passwordupdate HTTP/1.1" 200 -
+2023-10-09 21:32:20,094 INFO 127.0.0.1 - - [09/Oct/2023 21:32:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:20,106 INFO 127.0.0.1 - - [09/Oct/2023 21:32:20] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:20,766 INFO 127.0.0.1 - - [09/Oct/2023 21:32:20] "GET / HTTP/1.1" 200 -
+2023-10-09 21:32:20,788 INFO 127.0.0.1 - - [09/Oct/2023 21:32:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:20,797 INFO 127.0.0.1 - - [09/Oct/2023 21:32:20] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:44,354 INFO 127.0.0.1 - - [09/Oct/2023 21:32:44] "GET /about HTTP/1.1" 200 -
+2023-10-09 21:32:44,377 INFO 127.0.0.1 - - [09/Oct/2023 21:32:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:44,385 INFO 127.0.0.1 - - [09/Oct/2023 21:32:44] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:44,386 INFO 127.0.0.1 - - [09/Oct/2023 21:32:44] "[36mGET /static/images/image2.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:32:44,847 INFO 127.0.0.1 - - [09/Oct/2023 21:32:44] "GET / HTTP/1.1" 200 -
+2023-10-09 21:32:44,869 INFO 127.0.0.1 - - [09/Oct/2023 21:32:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:32:44,877 INFO 127.0.0.1 - - [09/Oct/2023 21:32:44] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:34:22,264 INFO 127.0.0.1 - - [09/Oct/2023 21:34:22] "GET /contactsean HTTP/1.1" 200 -
+2023-10-09 21:34:22,291 INFO 127.0.0.1 - - [09/Oct/2023 21:34:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:34:22,298 INFO 127.0.0.1 - - [09/Oct/2023 21:34:22] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:34:22,299 INFO 127.0.0.1 - - [09/Oct/2023 21:34:22] "[36mGET /static/images/image3.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:34:22,750 INFO 127.0.0.1 - - [09/Oct/2023 21:34:22] "GET /about HTTP/1.1" 200 -
+2023-10-09 21:34:22,773 INFO 127.0.0.1 - - [09/Oct/2023 21:34:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:34:22,782 INFO 127.0.0.1 - - [09/Oct/2023 21:34:22] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:34:22,787 INFO 127.0.0.1 - - [09/Oct/2023 21:34:22] "[36mGET /static/images/image2.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:34:23,755 INFO 127.0.0.1 - - [09/Oct/2023 21:34:23] "GET /read HTTP/1.1" 200 -
+2023-10-09 21:34:23,776 INFO 127.0.0.1 - - [09/Oct/2023 21:34:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:34:23,784 INFO 127.0.0.1 - - [09/Oct/2023 21:34:23] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:34:23,789 INFO 127.0.0.1 - - [09/Oct/2023 21:34:23] "[36mGET /static/images/image4.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:34:24,117 INFO 127.0.0.1 - - [09/Oct/2023 21:34:24] "GET /registration HTTP/1.1" 200 -
+2023-10-09 21:34:24,138 INFO 127.0.0.1 - - [09/Oct/2023 21:34:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:34:24,147 INFO 127.0.0.1 - - [09/Oct/2023 21:34:24] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:34:24,149 INFO 127.0.0.1 - - [09/Oct/2023 21:34:24] "[36mGET /static/images/image5.jpg HTTP/1.1[0m" 304 -
+2023-10-09 21:34:58,672 INFO 127.0.0.1 - - [09/Oct/2023 21:34:58] "GET / HTTP/1.1" 200 -
+2023-10-09 21:34:58,695 INFO 127.0.0.1 - - [09/Oct/2023 21:34:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-09 21:34:58,703 INFO 127.0.0.1 - - [09/Oct/2023 21:34:58] "[36mGET /static/images/image1.jpg HTTP/1.1[0m" 304 -

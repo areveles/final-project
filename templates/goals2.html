@@ -1,0 +1,18 @@
+{% extends "thebase.html" %}
+
+{% block title %}
+    Goals Dashboard
+{% endblock %}
+
+{% block content %}
+    <h2>Goals Dashboard</h2>
+    <div class="goal-details">
+        <h3>Goal Details</h3>
+        <p><strong>Goal Type:</strong> {{ goal.goal_type }}</p>
+        <p><strong>Start Date:</strong> {{ goal.start_date }}</p>
+        <p><strong>End Date:</strong> {{ goal.end_date }}</p>
+        <p><strong>Target:</strong> {{ goal.target }}</p>
+        <p><strong>Progress:</strong> {{ goal.progress }}</p>
+        <p><strong>Progress Percent:</strong> {{ goal.progress_percent }}%</p>
+    </div>
+{% endblock %}
