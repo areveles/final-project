@@ -1,22 +1,27 @@
-{% extends "thebase.html" %}
+{% extends 'mybase.html' %}
 
 {% block title %}Login Form{% endblock %}
 
 {% block content %}
-<!-- <style>
-    body {
-        background-color: rgb(234, 13, 13); /* Put Image in document */
-    }
-</style> -->
 
-<h2>Login</h2>
+<style>
+    body {
+        background-color: rgb(234, 215, 13); /* Change the background color to yellow */
+    }
+</style>
+
+<h2>Login Form</h2>
 
 <form action="/login" method="POST">
-    <label for="username"> Username:</label>
-    <input type="text" id="username" name="username" pattern="^[a-zA-Z0-9_.-]{4,16}$" title="Username must bebetween 4 and 16 characters."><br><br>
-    <label for="password">Password: </label>
+     <!-- these are my labels and inputs-->
+    <label for="username">Username:</label> 
+    <input type="text" id="username" name="username"><br><br>
+    <label for="password">Password:</label>
     <input type="password" id="password" name="password"><br><br>
     <input type="submit" value="Submit">
 </form>
+
+
+<img src="{{ url_for('static', filename='images/image6.jpg') }}" alt="Cool" width="200" height="200"> <!-- Image -->
 
 {% endblock %}

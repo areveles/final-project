@@ -1,0 +1,13 @@
+{% extends 'mybase.html' %}
+
+{% block title %}Contact Sean{% endblock %}
+
+{% block content %}
+    <style>
+        body {
+            background-color: lightblue; /* Change the background color to light blue */
+        }
+    </style>
+    <p>You can contact me at seangramtham18@gmail.com</p>
+    <image src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Cool" width="200" height="200"> <!-- Image -->
+{% endblock %}
