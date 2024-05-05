@@ -1,0 +1,45 @@
+{% extends 'mybase.html' %}
+{% block title %}Your Exercise Data{% endblock %}
+
+<style>
+    body {
+        background-color: rgb(234, 13, 13);
+    }
+</style>
+
+{% block content %}
+    <h2>Your Exercise Data</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Duration (minutes)</th>
+                <th>Intensity</th>
+                <th>Calories Burned</th>
+                <th>Total Reps</th>
+                <th>Total Sets</th>
+                <th>Target Reps</th>
+                <th>Heart Rate</th>
+                <th>Exercise Type</th>
+                <th>Completed (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for exercise in exercises %}
+            <tr>
+                <td>{{ exercise.exerciseduration }}</td>
+                <td>{{ exercise.intensity }}</td>
+                <td>{{ exercise.caloriesburned }}</td>
+                <td>{{ exercise.totalreps }}</td>
+                <td>{{ exercise.totalsets }}</td>
+                <td>{{ exercise.targetreps }}</td>
+                <td>{{ exercise.heartrate }}</td>
+                <td>{{ exercise.exercise_type }}</td>
+                <td>{{ exercise.completed }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ url_for('exercise') }}">Back to Submit Exercise</a>
+{% endblock %}

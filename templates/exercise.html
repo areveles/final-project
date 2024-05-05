@@ -1,40 +1,58 @@
-{% extends "thebase.html" %}
+{% extends "mybase.html" %}
 
 {% block title %}
-    Exercise
+Exercise
 {% endblock %}
 
 {% block content %}
-    <h2>Exercise Tracker</h2>
-    <form method="POST" action="/exercise">
-        <div class="form-group">
-            <label for="goalType">Exercise Goal Type:</label>
-            <select class="form-control" id="goalType" name="goalType">
-                {% for goal_type, description in goal_types.items() %}
-                    <option value="{{ goal_type }}">{{ description }}</option>
-                {% endfor %}
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="exerciseduration">Duration of Exercise (in minutes):</label>
-            <input type="number" class="form-control" id="exerciseduration" name="exerciseduration" placeholder="Enter duration">
-        </div>
-        <div class="form-group">
-            <label for="caloriesburned">Calories Burned:</label>
-            <input type="number" class="form-control" id="caloriesburned" name="caloriesburned" placeholder="Enter calories burned">
-        </div>
-        <div class="form-group">
-            <label for="currentreps">Current Reps:</label>
-            <input type="number" class="form-control" id="currentreps" name="currentreps" placeholder="Enter current reps">
-        </div>
-        <div class="form-group">
-            <label for="numberofsets">Number of Sets:</label>
-            <input type="number" class="form-control" id="numberofsets" name="numberofsets" placeholder="Enter number of sets">
-        </div>
-        <div class="form-group">
-            <label for="exerciseDateTime">Exercise Date and Time:</label>
-            <input type="datetime-local" class="form-control" id="exerciseDateTime" name="exerciseDateTime">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+<style>
+    body {
+        background-color: rgb(201, 173, 230);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+</style>
+<h2>Exercise Tracker</h2>
+<form method="POST" action="/submit_exercise">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <label for="exerciseduration">Exercise Duration:</label>
+        {{ form.exerciseduration(class="form-control") }}
+    </div>
+    <div class="form-group">
+        <label for="intensity">Intensity (out of 10):</label>
+        {{ form.intensity(class="form-control") }}
+    </div>
+    <div class="form-group">
+        <label for="caloriesburned">Calories Burned:</label>
+        {{ form.caloriesburned(class="form-control") }}
+    </div>
+    <div class="form-group">
+        <label for="totalreps">Total Reps:</label>
+        {{ form.totalreps(class="form-control") }}
+    </div>
+    <div class="form-group">
+        <label for="totalsets">Total Sets:</label>
+        {{ form.totalsets(class="form-control") }}
+    </div>
+    <div class="form-group">
+        <label for="targetreps">Target Reps:</label>
+        {{ form.targetreps(class="form-control") }}
+    </div>
+    <div class="form-group">
+        <label for="heartrate">Heart Rate:</label>
+        {{ form.heartrate(class="form-control") }}
+    </div>
+    <div class="form-group">
+        <label for="exercise_type">Type of Exercise:</label>
+        {{ form.exercise_type(class="form-control") }}
+    </div>
+    <div class="form-group">
+        <label for="completed">Percentage Completed:</label>
+        {{ form.completed(class="form-control") }}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 {% endblock %}

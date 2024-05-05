@@ -1,80 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <!-- It wont let me link the CSS file -->
-    <title>{% block title %}Lab 8{% endblock %}</title>
+    <title>{% block title %}Fitness Tracker{% endblock %}</title>
 
-    <!-- Define a block for cursive text styling -->
     {% block styles %}
     <style>
-        
     </style>
-    {% endblock %} <!-- End the block -->
+    {% endblock %}
 </head>
+
 <body>
     <header>
-        <h1 class="cursive-text">Lab 8</h1> <!-- Set the title of the page(NOT REAL CURSIVE) -->
-        <h2 class="cursive-text">Buttons</h2> <!-- Header under the title -->
-        <nav class="cursive-text"> <!-- Set the navigation bar(STILL NOT CURSIVE) -->
+        <h1 class="cursive-text">Fitness Tracker</h1>
+        <nav class="cursive-text">
             <ul>
-                <li><a href="/">Home</a></li> 
-                <li><a href="/about">About</a></li>
-                <li><a href="/contactsean">Contact</a></li>
-                <li><a href="/registration">Register</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/exercise">Exercise</a></li> 
-                <li><a href="/healthandfitness">Health and Fitness</a></li> 
-                <li><a href="/profile">Profile</a></li>
-                <li><a href="/workoutplan">Workout Plan</a></li> 
-                <li><a href="/goals">Goals</a></li> 
-                <li><a href="/displaygoals">Goals</a></li> 
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/registration">Register</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/exercise">Exercises</a></li>
+                    <li><a href="/workoutplanner">Workout Planner</a></li>
+                    <li><a href="/goals">Goals</a></li>
+                    <li><a href="/displaygoals">Display Goals</a></li>
+                    <li><a href="/displayexercises">Display Exercises</a></li>
+                    <li><a href="/displayworkouts">Display Workouts</a></li>
+                    <li><a href="/healthandfitness">Calorie Tracker</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+
             </ul>
         </nav>
 
         {% if current_user.is_authenticated %}
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        {% if category == 'success' %}
-                            <div class="alert alert-success alter-dismissible fade show" role="alert">
-                                {{ message }}
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        {% if category == 'success' %}
+        <div class="alert alert-success alter-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         {% endif %}
-
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        {% endif %}
     </header>
 
     <main>
-        <h3 class="cursive-text">This is my updated website for lab 8 </h3> <!-- Header for the section with buttons -->
-        
-        <p>This is my paragraph, I'm not sure what to put here but this so far has been a cool assignment</p>
-        <p>I have enjoyed learning a lot about HTML and this formatting is cool, I'm going to try to do inheritance</p>
-        
-       
-        <ul>
-       <image src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Cool" width="200" height="200"> <!-- Image -->
-
-        
-        <a href="https://www.youtube.com/">Visit Youtube</a> <!-- External link -->
-        <a href="https://www.google.com/">Visit Google</a> <!-- External link -->
-        <a href="https://www.reddit.com/">Visit Reddit</a> <!-- External link -->
-
-
-        <ul>
         {% block content %}{% endblock %}
     </main>
 
     <footer>
         &copy; {{ current_year }} My Website
-        <h3 class="cursive-text"></h3> <!-- Header at the bottom of the page -->
+        <h3 class="cursive-text"></h3>
     </footer>
 </body>
+
 </html>

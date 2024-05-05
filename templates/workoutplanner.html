@@ -1,0 +1,62 @@
+{% extends "mybase.html" %}
+
+{% block title %}
+Workout Planner
+{% endblock %}
+
+{% block content %}
+<h2>Workout Planner</h2>
+<form method="POST" action="{{ url_for('workout_planner') }}">
+    {{ form.hidden_tag() }}
+
+    <div class="form-group">
+        {{ form.duration.label }}
+        {{ form.duration(class="form-control") }}
+        {% for error in form.duration.errors %}
+        <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.intensity.label }}
+        {{ form.intensity(class="form-control") }}
+        {% for error in form.intensity.errors %}
+        <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.frequency.label }}
+        {{ form.frequency(class="form-control") }}
+        {% for error in form.frequency.errors %}
+        <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.num_exercises.label }}
+        {{ form.num_exercises(class="form-control") }}
+        {% for error in form.num_exercises.errors %}
+        <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.workout_date.label }}
+        {{ form.workout_date(class="form-control") }}
+        {% for error in form.workout_date.errors %}
+        <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        {{ form.calories_burned.label }}
+        {{ form.calories_burned(class="form-control") }}
+        {% for error in form.calories_burned.errors %}
+        <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

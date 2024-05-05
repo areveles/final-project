@@ -1,17 +1,14 @@
-{% extends 'mybase.html' %} <!-- I'm trying to do inhertiance -->
+{% extends 'mybase.html' %}
 
 {% block title %}About Us{% endblock %}
 
 {% block content %}
     <style>
         body {
-            background-color: rgb(179, 230, 173); /* changes to green */ 
+            background-color: rgb(179, 230, 173);
         }
-    </style>
-    <h2>This is all about me</h2> 
-    <image src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Cool" width="200" height="200"> <!-- Image -->
-    <p>My name is Sean Grantham</p>
-    <p>I currently attend University of Maryland Global Campus</p> 
-    <p>I am 26 years old</p> 
-    <p>I currently work at a computer repair shop</p>
+    </style>> 
+    <p>Welcome to our Fitness Tracker</p>
+    <p>Group 5 Project</p>
+    
 {% endblock %}
