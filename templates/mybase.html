@@ -19,52 +19,37 @@
         <h2 class="cursive-text">Buttons</h2> <!-- Header under the title -->
         <nav class="cursive-text"> <!-- Set the navigation bar(STILL NOT CURSIVE) -->
             <ul>
-                <!-- I fixed these -->
                 <li><a href="/">Home</a></li> 
                 <li><a href="/about">About</a></li>
                 <li><a href="/contactsean">Contact</a></li>
-                <li><a href="/read">Read</a></li>
                 <li><a href="/registration">Register</a></li>
-                <li><a href="/table">Table</a></li>
                 <li><a href="/login">Login</a></li>
-                <li><a href="/passwordupdate">Password Update</a></li>
-                
-
-
+                <li><a href="/exercise">Exercise</a></li> 
+                <li><a href="/healthandfitness">Health and Fitness</a></li> 
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/workoutplan">Workout Plan</a></li> 
+                <li><a href="/goals">Goals</a></li> 
+                <li><a href="/displaygoals">Goals</a></li> 
             </ul>
         </nav>
-        {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-        {% for category, message in messages %}
-            {% if category == 'error' %}
-                <div class="alert alert-danger alter-dismissible fade show" role="alert">
-                    {{ message }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+
+        {% if current_user.is_authenticated %}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        {% if category == 'success' %}
+                            <div class="alert alert-success alter-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 {% endif %}
-            {% endfor %}
+            {% endwith %}
         {% endif %}
-    {% endwith %}
 
-{% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-        {% for category, message in messages %}
-            {% if category == 'success' %} {# Assuming you have a 'success' category for flash messages #}
-                <div class="alert alert-success alter-dismissible fade show" role="alert">
-                    {{ message }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-
-
-        <p class="cursive-text">Current Date and Time: {{ current_time.strftime('%Y-%m-%d %H:%M:%S') }}</p>
     </header>
 
     <main>

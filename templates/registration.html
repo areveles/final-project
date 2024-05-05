@@ -11,22 +11,35 @@
     
     <h2>Registration Form</h2>
     
-    <form action="/registration" method="POST"> <!-- Use /register for registration -->
-        <!-- these are my labels and inputs -->
+    <form action="/registration" method="POST"> 
+        {{ form.hidden_tag() }}
+
         <label for="username">Username:</label> 
-        <input type="text" id="username" name="username"><br><br>
+        {{ form.username(class="form-control") }}<br><br>
         
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        {{ form.password(class="form-control") }}<br><br>
         
         <label for="confirm_password">Confirm Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password"><br><br>
+        {{ form.confirm_password(class="form-control") }}<br><br>
         
-        <input type="submit" value="Register">
+        <label for="name">Name:</label>
+        {{ form.name(class="form-control") }}<br><br>
+
+        <label for="height">Height (cm):</label>
+        {{ form.height(class="form-control") }}<br><br>
+
+        <label for="weight">Weight (kg):</label>
+        {{ form.weight(class="form-control") }}<br><br>
+
+        <label for="age">Age:</label>
+        {{ form.age(class="form-control") }}<br><br>
+        
+        <input type="submit" value="Register" class="btn btn-primary">
     </form>
     
     <p>Your password has to be 12 characters long with at least 1 upper/lower case, 1 number, and 1 special character</p>
-    <ul> <!-- This is an unordered list for the password complexity -->
+    <ul>
         <li>At least 1 uppercase character</li> 
         <li>At least 1 lowercase character</li>
         <li>At least 1 number</li>  
@@ -34,58 +47,6 @@
     </ul>
     
     <img src="{{ url_for('static', filename='images/image5.jpg') }}" alt="Cool" width="200" height="200"> <!-- Image -->
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function () { 
-            const passwordInput = document.getElementById('password');
-            const confirmInput = document.getElementById('confirm_password');
-            const passwordValidationMessages = document.getElementById('password_validation_messages');
-
-            passwordInput.addEventListener('keyup', validatePassword);
-            confirmInput.addEventListener('keyup', validatePassword);
-
-            function validatePassword() {
-                const password = passwordInput.value;
-                const confirm = confirmInput.value;
-                const uppercaseRegex = /[A-Z]/;
-                const lowercaseRegex = /[a-z]/;
-                const numberRegex = /[0-9]/;
-                const specialCharRegex = /[!@#$%^&*()\-_=+\[\]{}|;:'",.<>?/]/; // Updated special characters
-
-                const hasUppercase = uppercaseRegex.test(password);
-                const hasLowercase = lowercaseRegex.test(password);
-                const hasNumber = numberRegex.test(password);
-                const hasSpecialChar = specialCharRegex.test(password);
-
-                const validationMessages = [];
-
-                if (password.length < 12) {
-                    validationMessages.push('Password must be at least 12 characters long.');
-                }
-                if (!hasUppercase) {
-                    validationMessages.push('Password must have at least one uppercase character.');
-                }
-                if (!hasLowercase) {
-                    validationMessages.push('Password must have at least one lowercase character.');
-                }
-                if (!hasNumber) {
-                    validationMessages.push('Password must have at least one number.');
-                }
-                if (!hasSpecialChar) {
-                    validationMessages.push('Password must have at least one special character.');
-                }
-                if (password !== confirm) {
-                    validationMessages.push('Passwords do not match.');
-                }
-
-                if (validationMessages.length > 0) {
-                    passwordValidationMessages.innerHTML = validationMessages.join('<br>');
-                } else {
-                    passwordValidationMessages.innerHTML = '';
-                }
-            }
-        });
-    </script>
     
     <p id="password_validation_messages" class="error"></p>
 {% endblock %}

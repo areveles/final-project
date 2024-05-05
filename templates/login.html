@@ -3,25 +3,30 @@
 {% block title %}Login Form{% endblock %}
 
 {% block content %}
+    <style>
+        body {
+            background-color: rgb(234, 215, 13); /* Change the background color to yellow */
+        }
+    </style>
 
-<style>
-    body {
-        background-color: rgb(234, 215, 13); /* Change the background color to yellow */
-    }
-</style>
+    <h2>Login Form</h2>
 
-<h2>Login Form</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 
-<form action="/login" method="POST">
-     <!-- these are my labels and inputs-->
-    <label for="username">Username:</label> 
-    <input type="text" id="username" name="username"><br><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"><br><br>
-    <input type="submit" value="Submit">
-</form>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.username.label }} {{ form.username }}
+        {{ form.password.label }} {{ form.password }}
+        {{ form.submit }}
+    </form>
 
-
-<img src="{{ url_for('static', filename='images/image6.jpg') }}" alt="Cool" width="200" height="200"> <!-- Image -->
-
+    <a href="{{ url_for('registration') }}">Don't have an account? Sign Up</a>
 {% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'mybase.html' %}
+{% block title %}Your Goals{% endblock %}
+
+{% block content %}
+    <h2>Your Goals</h2>
+
+    <ul>
+        {% for goal in goals %}
+            <li>
+                <strong>{{ goal.title }}</strong><br>
+                Description: {{ goal.description }}<br>
+                Type: {{ goal.goal_type }}<br>
+                Start Date: {{ goal.start_date.strftime('%Y-%m-%d') }}<br>
+                End Date: {{ goal.end_date.strftime('%Y-%m-%d') }}<br>
+                Progress: {{ goal.progress }}%<br>
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('goals') }}">Back to Create New Goal</a>
+{% endblock %}
