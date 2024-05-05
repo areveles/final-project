@@ -4453,3 +4453,5 @@ NameError: name 'current_time' is not defined. Did you mean: 'current_user'?
 2024-05-05 01:16:17,143 INFO 127.0.0.1 - - [05/May/2024 01:16:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
 2024-05-05 01:17:10,560 INFO 127.0.0.1 - - [05/May/2024 01:17:10] "GET /healthandfitness?consume_date=2024-05-05 HTTP/1.1" 200 -
 2024-05-05 01:17:10,627 INFO 127.0.0.1 - - [05/May/2024 01:17:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-05-05 01:19:27,901 INFO  * Detected change in 'c:\\Users\\Amelia\\Documents\\gitrepo\\final-project\\app.py', reloading
+2024-05-05 01:19:28,005 INFO  * Restarting with stat
