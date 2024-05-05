@@ -1,0 +1,24 @@
+/* It wont let me link this file so its here just so you can read this */
+
+body {
+    font-family: cursive, sans-serif; /* Set the font to cursive(its not actually cursive) */
+    background-color: grey; /* Set the background color to blue */
+}
+/* My 3 heading styles */
+
+h1.cursive-text {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+h2.cursive-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+}
+
+h3.cursive-text {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}Fitness Tracker{% endblock %}</title>
+
+    {% block styles %}
+    <style>
+        /* Add your custom styles here */
+    </style>
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <h1 class="cursive-text">Fitness Tracker</h1>
+        <h2 class="cursive-text">Buttons</h2>
+        <nav class="cursive-text">
+            <ul>
+                    <li><a href="/">Home</a></li> 
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contactsean">Contact</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/workoutplan">Workout Plan</a></li> 
+                    <li><a href="/goals">Goals</a></li> 
+                    <li><a href="/displaygoals">Display Goals</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/registration">Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/healthandfitness">Calorie Tracker</a></li>
+            </ul>
+        </nav>
+
+        {% if current_user.is_authenticated %}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        {% if category == 'success' %}
+                            <div class="alert alert-success alter-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        {% endif %}
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        &copy; {{ current_year }} My Website
+        <h3 class="cursive-text"></h3>
+    </footer>
+</body>
+</html>

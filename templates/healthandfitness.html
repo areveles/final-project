@@ -1,15 +1,18 @@
-{% extends "thebase.html" %}
+{% extends "mybase.html" %}
 
 {% block title %}
-    Data Input
+    Calorie Intake
 {% endblock %}
+
 
 {% block content %}
     <h2>Calorie Intake Page</h2>
     <form>
-        <div class="form-group">
+        <div class="form-group" method="POST">
             <label for="calories">Meal Calorie Intake:</label>
-            <input type="number" class="form-control" id="calories" placeholder="Enter calories consumed">
+            <input type="number" class="form-control" id="calories" placeholder="Enter calories consumed" required>
+            <label for="consume_date">Date Eaten:</label>
+            <input type="date" id="consume_date" name="consume_date" required><br><br>
         </div>
         <button type="submit" class="btn btn-primary">Confirm</button>
     </form>
